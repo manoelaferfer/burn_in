@@ -1,0 +1,23 @@
+RELATORIO DE FALHAS - BURN-IN HSM/SAM
+=====================================
+Modo: producao (qualifica lote)
+Veredicto: REPROVADO
+Motivo: 1 operacoes falharam em 1 (taxa 0.0000%)
+Duracao: 5 / 86400 s
+Total de falhas de operacao: 1
+
+O QUE ACONTECEU
+1 falha(s) de operacao nesta sessao.
+Carga: POST /api/hardware/benchmark {apdu:00C002A008, repetitions:10}.
+Significado de cada tipo abaixo (sem repetir a lista cronologica).
+
+FALHAS POR TIPO
+
+1) autenticacao — 1 ocorrencia(s)
+   O que: O HSM recusou o acesso (HTTP 401/403).
+   Como: Token ausente, expirado, ou JWT de outro HSM/chave — o endpoint nao aceitou o Bearer.
+   Primeira: 2026-09-21 15:13:37
+   Ultima: 2026-09-21 15:13:37
+   Exemplo: HTTP 401 em /api/hardware/benchmark
+
+Lista cronologica: burnin_errors.log

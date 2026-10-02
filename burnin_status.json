@@ -1,0 +1,70 @@
+{
+  "running": 0,
+  "elapsed_s": 5.3,
+  "duration_s": 86400,
+  "start_epoch": 1790014417,
+  "now_epoch": 1790014422,
+  "interface": "HTTP",
+  "target": "http://10.100.0.155:8080",
+  "modo": "producao",
+  "timeout_s": 600,
+  "bench_retries": 1,
+  "veredicto": "REPROVADO",
+  "veredicto_motivo": "1 operacoes falharam em 1 (taxa 0.0000%)",
+  "duration_completa": 0,
+  "veredicto_criterios": [
+    {"nome":"Burn-in SAM fisico","ok":1,"detalhe":"POST /api/hardware/benchmark 00C002A008 x10"},
+    {"nome":"Qualificacao de lote","ok":1,"detalhe":"--producao (APROVADO/REPROVADO)"},
+    {"nome":"Duracao completa","ok":0,"detalhe":"5 / 86400 s (exige >= 98%)"},
+    {"nome":"Operacoes registradas","ok":1,"detalhe":"1"},
+    {"nome":"Zero falhas de operacao","ok":0,"detalhe":"1 fail em 1 (taxa 0.0000%)"},
+    {"nome":"SAMs todos operacionais","ok":1,"detalhe":"52 / 52"},
+    {"nome":"Sem novos erros de sessao","ok":1,"detalhe":"inicio 0, atual 0, novos 0"},
+    {"nome":"Sem degradacao (2a metade)","ok":-1,"detalhe":"ainda sem 2a metade"},
+    {"nome":"HSM isHealthy","ok":1,"detalhe":"true"}
+  ],
+  "hsm": {
+    "alias": "HSM SAMPLE CONFIG",
+    "numberOfSams": 52,
+    "numberOfOperative": 52,
+    "uptime": "10 days",
+    "load1": 0.60,
+    "load5": 0.91,
+    "load15": 0.88,
+    "mem_used_mb": 637,
+    "mem_total_mb": 1976,
+    "mem_free_mb": 1339,
+    "is_healthy": 1,
+    "health_msg": "OK",
+    "cpu_cores": 4,
+    "openSessions": 1,
+    "maxSessions": 114,
+    "sessionErrors": 0,
+    "sessionErrorsStart": 0,
+    "sessionErrorsNew": 0,
+    "inQueue": 0,
+    "temp_c": -1.0
+  },
+  "sams": [
+    {
+      "id": "HSM:benchmark",
+      "total": 1,
+      "ok": 0,
+      "fail": 1,
+      "success_pct": 0.000000,
+      "lat_avg_ms": 51.643,
+      "lat_stddev_ms": 0.000,
+      "lat_max_ms": 51.643,
+      "ops_per_sec": 0.19,
+      "temp_avg_c": 0.0,
+      "temp_rt_c": 0.0,
+      "lat_rt_ms": 51.643,
+      "degradacao_1a_metade_pct": 0.00,
+      "degradacao_2a_metade_pct": -1.00
+    }
+  ],
+  "falhas_total": 1,
+  "falhas_resumo": [
+    {"tipo":"autenticacao","qtd":1,"primeira":"2026-09-21 15:13:37","ultima":"2026-09-21 15:13:37","exemplo":"HTTP 401 em /api/hardware/benchmark"}
+  ]
+}
